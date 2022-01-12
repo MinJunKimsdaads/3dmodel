@@ -1,11 +1,12 @@
     import * as THREE from './three.js-master/build/three.module.js';
     import {OrbitControls} from './three.js-master/examples/jsm/controls/OrbitControls.js';
     import {OBJLoader} from './three.js-master/examples/jsm/loaders/OBJLoader.js';
+    import { MTLLoader } from './three.js-master/examples/jsm/loaders/MTLLoader.js';
 
     function main() {
       const canvas = document.querySelector('#d');
       const renderer = new THREE.WebGLRenderer({canvas});
-         
+    
       const fov = 45;
       const aspect = 2;  // the canvas default
       const near = 0.1;
@@ -53,16 +54,20 @@
         const color = 0xFFFFFF;
         const intensity = 1;
         const light = new THREE.DirectionalLight(color, intensity);
-        light.position.set(0, 10, 0);
-        light.target.position.set(-5, 0, 0);
+        light.position.set(5, 10, 2);
         scene.add(light);
         scene.add(light.target);
       }
     
       {
-        const objLoader = new OBJLoader();
-        objLoader.load('https://threejs.org/manual/examples/resources/models/windmill/windmill.obj', (root) => {
-          scene.add(root);
+        const mtlLoader = new MTLLoader();
+        mtlLoader.load('three.js-master/VolvoS90.mtl', (mtl) => {
+          mtl.preload();
+          const objLoader = new OBJLoader();
+          objLoader.setMaterials(mtl);
+          objLoader.load('three.js-master/untitled.obj', (root) => {
+            scene.add(root);
+          });
         });
       }
     
