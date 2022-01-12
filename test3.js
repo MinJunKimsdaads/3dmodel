@@ -87,7 +87,7 @@
       const cars = [];
       {
         const gltfLoader = new GLTFLoader();
-        gltfLoader.load('./three.js-master/untitled.gltf', (gltf) => {
+        gltfLoader.load('./three.js-master/test2.gltf', (gltf) => {
           const root = gltf.scene;
           scene.add(root);
     
