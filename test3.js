@@ -87,7 +87,7 @@
       const cars = [];
       {
         const gltfLoader = new GLTFLoader();
-        gltfLoader.load('https://threejs.org/manual/examples/resources/models/cartoon_lowpoly_small_city_free_pack/scene.gltf', (gltf) => {
+        gltfLoader.load('./three.js-master/untitled.gltf', (gltf) => {
           const root = gltf.scene;
           scene.add(root);
     
