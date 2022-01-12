@@ -1,10 +1,10 @@
     import * as THREE from './three.js-master/build/three.module.js';
     import {OrbitControls} from './three.js-master/examples/jsm/controls/OrbitControls.js';
     import {OBJLoader} from './three.js-master/examples/jsm/loaders/OBJLoader.js';
-    import { MTLLoader } from './three.js-master/examples/jsm/loaders/MTLLoader.js';
+    // import { MTLLoader } from './three.js-master/examples/jsm/loaders/MTLLoader.js';
 
     function main() {
-      const canvas = document.querySelector('#d');
+      const canvas = document.querySelector('#c');
       const renderer = new THREE.WebGLRenderer({canvas});
     
       const fov = 45;
@@ -22,7 +22,7 @@
       scene.background = new THREE.Color('black');
     
       {
-        const planeSize = 40;
+        const planeSize = 10;
     
         const loader = new THREE.TextureLoader();
         const texture = loader.load('https://threejs.org/manual/examples/resources/images/checker.png');
@@ -54,20 +54,16 @@
         const color = 0xFFFFFF;
         const intensity = 1;
         const light = new THREE.DirectionalLight(color, intensity);
-        light.position.set(5, 10, 2);
+        light.position.set(0, 10, 0);
+        light.target.position.set(-5, 0, 0);
         scene.add(light);
         scene.add(light.target);
       }
     
       {
-        const mtlLoader = new MTLLoader();
-        mtlLoader.load('three.js-master/VolvoS90.mtl', (mtl) => {
-          mtl.preload();
-          const objLoader = new OBJLoader();
-          objLoader.setMaterials(mtl);
-          objLoader.load('three.js-master/untitled.obj', (root) => {
-            scene.add(root);
-          });
+        const objLoader = new OBJLoader();
+        objLoader.load('three.js-master/untitled.obj', (root) => {
+          scene.add(root);
         });
       }
     
