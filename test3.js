@@ -3,7 +3,7 @@
     import {GLTFLoader} from './three.js-master/examples/jsm/loaders/GLTFLoader.js';
     
     function main() {
-      const canvas = document.querySelector('#e');
+      const canvas = document.querySelector('#c');
       const renderer = new THREE.WebGLRenderer({canvas});
     
       const fov = 45;
@@ -84,13 +84,31 @@
         camera.lookAt(boxCenter.x, boxCenter.y, boxCenter.z);
       }
     
-      let cars;
+      const cars = [];
       {
         const gltfLoader = new GLTFLoader();
-        gltfLoader.load('./three.js-master/untitled.gltf', (gltf) => {
+        gltfLoader.load('https://threejs.org/manual/examples/resources/models/cartoon_lowpoly_small_city_free_pack/scene.gltf', (gltf) => {
           const root = gltf.scene;
           scene.add(root);
-          cars = root.getObjectByName('Cars');
+    
+          const loadedCars = root.getObjectByName('Cars');
+          const fixes = [
+            { prefix: 'Car_08', rot: [Math.PI * .5, 0, Math.PI * .5], },
+            { prefix: 'CAR_03', rot: [0, Math.PI, 0], },
+            { prefix: 'Car_04', rot: [0, Math.PI, 0], },
+          ];
+    
+          root.updateMatrixWorld();
+          for (const car of loadedCars.children.slice()) {
+            const fix = fixes.find(fix => car.name.startsWith(fix.prefix));
+            const obj = new THREE.Object3D();
+            car.getWorldPosition(obj.position);
+            car.position.set(0, 0, 0);
+            car.rotation.set(...fix.rot);
+            obj.add(car);
+            scene.add(obj);
+            cars.push(obj);
+          }
     
           // compute the box that contains all the stuff
           // from root and below
@@ -129,10 +147,8 @@
           camera.updateProjectionMatrix();
         }
     
-        if (cars) {
-          for (const car of cars.children) {
-            car.rotation.y = time;
-          }
+        for (const car of cars) {
+          car.rotation.y = time;
         }
     
         renderer.render(scene, camera);
