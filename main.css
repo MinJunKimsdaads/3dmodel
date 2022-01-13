@@ -2,16 +2,59 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
+@font-face {
+    font-family: 'tesla';
+    src: url('./TESLA.ttf') format('truetype');
+}
+
 body {
     width: 100vw;
-    height: 100vh;
+    height: 400vh;
     margin: 0;
     padding: 0;
 }
 
 #c {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
     margin: 0;
     padding: 0;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+#logo {
+    width: 0%;
+    height: 20%;
+    font-family: tesla;
+    font-size: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-fill-color: transparent; 
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: #cc0000;
+    animation-name: logochange;
 }
