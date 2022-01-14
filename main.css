@@ -18,7 +18,7 @@ body {
     padding: 0;
 }
 
-#c {
+canvas {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -26,6 +26,10 @@ body {
     left: 0;
     margin: 0;
     padding: 0;
+}
+
+#d,#e,#f,#g {
+    display: none;
 }
 
 #loading {
@@ -55,6 +59,139 @@ body {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    background-color: #cc0000;
-    animation-name: logochange;
+    background-color: white;
+}
+
+#logoimg {
+    width: 360px;
+    height: 320px;
+    background-color: white;
+}
+
+
+
+#btnbox {
+    width: 20%;
+    height: 5%;
+    position: fixed;
+    left: 40%;
+    top: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50%;
+    position: relative;
+    border: green solid 3px;
+}
+
+.btn_white {
+    background-color: white;
+}
+
+.btn::after {
+    width: 200px;
+    height: 20px;
+    color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+    left: -90px;
+    font-size: 13px;
+    /* background-color: yellow; */
+}
+
+.btn_white:hover::after {
+    content: 'Pearl White Multi-Coat';
+}
+
+.btn_black:hover::after {
+    content: 'Solid Black';
+}
+
+.btn_silver:hover::after {
+    content: 'Midnight Silver Metallic';
+}
+
+.btn_red:hover::after {
+    content: 'Red Multi-Coat';
+}
+
+.btn_blue:hover::after {
+    content: 'Deep Blue Metallic';
+}
+
+.btn_black {
+    background-color: black;
+}
+
+.btn_silver {
+    background-color: silver;
+}
+
+.btn_red {
+    background-color: red;
+}
+
+.btn_blue {
+    background-color: blue;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+#header {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: url('./three.js-master/logo.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-color: pink; */
+}
+
+#full {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 96%;
+    left: 90%;
+    border-radius: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+    border: green solid 3px;
+    color: white;
+}
+
+#full::after {
+    width: 200px;
+    height: 20px;
+    color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+    left: -90px;
+    font-size: 13px;
+}
+
+#full:hover {
+    cursor: pointer;
+}
+
+#full:hover::after {
+    content: 'Fullscreen';
 }

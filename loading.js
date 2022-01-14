@@ -1,3 +1,3 @@
-$('#logo').animate({'width':'30%'},7000,function(){
+$('#logo').animate({'width':'30%'},3000,function(){
     $('#loading').css('display','none');
 })

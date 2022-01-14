@@ -7,11 +7,27 @@
   <title>Document</title>
   <link rel="stylesheet" href="./main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <script src='loading.js' defer></script>
 </head>
 <body>
-  <!-- <canvas class="webgl"></canvas> -->
   <canvas id="c"></canvas>
+  <canvas id="d"></canvas>
+  <canvas id="e"></canvas>
+  <canvas id="f"></canvas>
+  <canvas id="g"></canvas>
+  <div id='btnbox'>
+    <div class='btn btn_white' id='white'></div>
+    <div class='btn btn_black' id='black'></div>
+    <div class='btn btn_silver' id='silver'></div>
+    <div class='btn btn_red' id='red'></div>
+    <div class='btn btn_blue' id='blue'></div>
+  </div>
+  <div id='header'>
+  </div>
+  <div id='full'>
+    <i class="fas fa-expand-alt"></i>
+  </div>
   <div id='loading'>
     <div id='logo'>
       TESLA
@@ -19,14 +35,11 @@
   </div>
 
 
-
-
-  <!-- <canvas id="d"></canvas>
-  <canvas id="e"></canvas>
-  <canvas id="f"></canvas> -->
-  <!-- <script src="./test1.js" type="module"></script>
-  <script src='./test2.js' type='module'></script> -->
-  <script src='./test3.js' type='module'></script>
-  <!-- <script src='./test4.js' type='module'></script> -->
+  <script src='./white.js' type='module'></script>
+  <script src='./red.js' type='module'></script>
+  <script src='./blue.js' type='module'></script>
+  <script src='./black.js' type='module'></script>
+  <script src='./silver.js' type='module'></script>
+  <script src='./changeColor.js'></script>
 </body>
 </html>
