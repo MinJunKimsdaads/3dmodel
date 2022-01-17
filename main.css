@@ -16,6 +16,8 @@ body {
     height: 400vh;
     margin: 0;
     padding: 0;
+    overflow: scroll;
+    color: white;
 }
 
 canvas {
@@ -28,7 +30,7 @@ canvas {
     padding: 0;
 }
 
-#d,#e,#f,#g {
+#d,#e,#f,#g,#h,#i,#j {
     display: none;
 }
 
@@ -44,7 +46,7 @@ canvas {
     justify-content: center;
     align-items: center;
     background-color: black;
-    color: white;
+    /* color: white; */
 }
 
 #logo {
@@ -68,8 +70,6 @@ canvas {
     background-color: white;
 }
 
-
-
 #btnbox {
     width: 20%;
     height: 5%;
@@ -79,6 +79,67 @@ canvas {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+#seatbtnbox {
+    width: 12%;
+    height: 5%;
+    position: fixed;
+    left: 44%;
+    top: 95%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.seatbtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50%;
+    position: relative;
+    border: green solid 3px;
+}
+
+.seatbtn:hover {
+    cursor: pointer;
+}
+
+.seatbtn_white {
+    background-color: white;
+}
+
+.seatbtn_black {
+    background-color: black;
+}
+
+.seatbtn_cream {
+    background-color: #d4c3b4;
+}
+
+.seatbtn_white:hover::after{
+    content: 'All White';
+}
+
+.seatbtn_black:hover::after{
+    content: 'All Black';
+}
+
+.seatbtn_cream:hover::after{
+    content: 'Cream';
+}
+
+.seatbtn::after {
+    width: 200px;
+    height: 20px;
+    /* color: white; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+    left: -90px;
+    font-size: 13px;
+    /* background-color: yellow; */
 }
 
 .btn {
@@ -96,7 +157,7 @@ canvas {
 .btn::after {
     width: 200px;
     height: 20px;
-    color: white;
+    /* color: white; */
     position: absolute;
     display: flex;
     justify-content: center;
@@ -153,11 +214,26 @@ canvas {
     position: fixed;
     top: 20px;
     left: 20px;
-    background: url('./three.js-master/logo.png');
+    background-image: url('./three.js-master/logo.png');
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-color: pink; */
+}
+
+#exitfull {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 96%;
+    left: 90%;
+    border-radius: 50% 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+    border: green solid 3px;
+    /* color: white; */
 }
 
 #full {
@@ -172,13 +248,13 @@ canvas {
     align-items: center;
     /* background-color: pink; */
     border: green solid 3px;
-    color: white;
+    /* color: white; */
 }
 
 #full::after {
     width: 200px;
     height: 20px;
-    color: white;
+    /* color: white; */
     position: absolute;
     display: flex;
     justify-content: center;
@@ -194,4 +270,167 @@ canvas {
 
 #full:hover::after {
     content: 'Fullscreen';
+}
+
+#exitfull::after {
+    width: 200px;
+    height: 20px;
+    /* color: white; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+    left: -90px;
+    font-size: 13px;
+}
+
+#exitfull:hover {
+    cursor: pointer;
+}
+
+#exitfull:hover::after {
+    content: 'Exit Fullscreen';
+}
+
+#changeview1 {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 96%;
+    left: 10%;
+    border-radius: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+    border: green solid 3px;
+    /* color: white; */
+}
+
+#changeview1::after {
+    width: 200px;
+    height: 20px;
+    /* color: white; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+    left: -90px;
+    font-size: 13px;
+}
+
+#changeview1:hover {
+    cursor: pointer;
+}
+
+#changeview1:hover::after {
+    content: 'View Interior';
+}
+
+#changeview2 {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 96%;
+    left: 10%;
+    border-radius: 50% 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+    border: green solid 3px;
+    /* color: white; */
+}
+
+#changeview2::after {
+    width: 200px;
+    height: 20px;
+    /* color: white; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+    left: -90px;
+    font-size: 13px;
+}
+
+#changeview2:hover {
+    cursor: pointer;
+}
+
+#changeview2:hover::after {
+    content: 'View Exterior';
+}
+
+.des_car {
+    font-family: 'Raleway', sans-serif;
+}
+
+#des1_car {
+    width: 30%;
+    height: 20%;
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    font-size: 16px;
+    /* background-color: pink; */
+}
+
+#des2_car {
+    width: 30%;
+    height: 20%;
+    position: fixed;
+    top: 60%;
+    left: 5%;
+    font-size: 16px;
+    /* background-color: pink; */
+}
+
+#des3_car {
+    width: 30%;
+    height: 20%;
+    position: fixed;
+    top: 20%;
+    left: 75%;
+    font-size: 16px;
+    /* background-color: pink; */
+}
+
+#des4_car {
+    width: 30%;
+    height: 20%;
+    position: fixed;
+    top: 60%;
+    left: 75%;
+    font-size: 16px;
+    /* background-color: pink; */
+}
+
+#scroll {
+    width: 20%;
+    height: 10%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 80%;
+    left: 40%;
+    animation-name: scroll;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* background-color: pink; */
+}
+
+@keyframes scroll {
+    from {
+        opacity: 1;
+        top: 80%;
+    }
+    to {
+        top: 85%;
+        opacity: 0;
+    }
 }

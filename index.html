@@ -7,15 +7,21 @@
   <title>Document</title>
   <link rel="stylesheet" href="./main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <script src='loading.js' defer></script>
 </head>
-<body>
+<body id='doc'>
   <canvas id="c"></canvas>
   <canvas id="d"></canvas>
   <canvas id="e"></canvas>
   <canvas id="f"></canvas>
   <canvas id="g"></canvas>
+  <canvas id="h"></canvas>
+  <canvas id="i"></canvas>
+  <canvas id="j"></canvas>
   <div id='btnbox'>
     <div class='btn btn_white' id='white'></div>
     <div class='btn btn_black' id='black'></div>
@@ -23,10 +29,56 @@
     <div class='btn btn_red' id='red'></div>
     <div class='btn btn_blue' id='blue'></div>
   </div>
+  <div id='seatbtnbox'>
+    <div class='seatbtn seatbtn_white' id='seatwhite'></div>
+    <div class='seatbtn seatbtn_black' id='seatblack'></div>
+    <div class='seatbtn seatbtn_cream' id='seatcream'></div>
+  </div>
   <div id='header'>
   </div>
+  <div id='exitfull'>
+    <i class="fas fa-compress-alt"id='exitfullscreen'></i>
+  </div>
   <div id='full'>
-    <i class="fas fa-expand-alt"></i>
+    <i class="fas fa-expand-alt" id='fullscreen'></i>
+  </div>
+  <div id='changeview1'>
+    <i class="far fa-eye"></i>
+  </div>
+  <div id='changeview2'>
+    <i class="fas fa-eye"></i>
+  </div>
+  <div id='des1_car' class='des_car'>
+    <h2>반응형 퍼포먼스</h2>
+    <p>
+      획기적인 퍼포먼스 휠과 타이어는 차량을<br>
+      지탱하고 도로에 더 강한 동력을 전달합니다.
+    </p>
+  </div>
+  <div id='des2_car' class='des_car'>
+    <h2>최적화된 공기역학</h2>
+    <p>
+      모든 부분의 디테일을 고려한 외관 디자인으로 Model S는<br>
+      양산차 중 가장 공기역학적으로 설계되었습니다.
+    </p>
+  </div>
+  <div id='des3_car' class='des_car'>
+    <h2>정제된 디자인</h2>
+    <p>
+      외관은 상징적인 디자인과<br>
+      우아한 요소가 적절히 결합되었습니다.
+    </p>
+  </div>
+  <div id='des4_car' class='des_car'>
+    <h2>효율성을 위한 설계</h2>
+    <p>
+      지구상에서 가장 낮은 공기 저항 계수와<br>
+      압도적인 효율성을 자랑하는 Model S는 속도와<br>
+      주행 가능 거리를 위해 설계되었습니다.
+    </p>
+  </div>
+  <div id='scroll'>
+    <p>스크롤하여 더 보기</p>
   </div>
   <div id='loading'>
     <div id='logo'>
@@ -34,13 +86,19 @@
     </div>
   </div>
 
-
   <script src='./white.js' type='module'></script>
   <script src='./red.js' type='module'></script>
   <script src='./blue.js' type='module'></script>
   <script src='./black.js' type='module'></script>
   <script src='./silver.js' type='module'></script>
+  <script src='./seat1.js' type='module'></script>
+  <script src='./seat2.js' type='module'></script>
+  <script src='./seat3.js' type='module'></script>
   <script src='./changeColor.js'></script>
+  <script src='./fullscreen.js'></script>
+  <script src='./textcolor.js'></script>
+  <script src='./description.js'></script>
+  <script src='./changeview.js'></script>
   <SCRIPT-x LANGUAGE="JavaScript-x">
     
     function processKey() 
