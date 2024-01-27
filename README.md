@@ -24,5 +24,5 @@
 <p></p>
 <p></p>
 
-<a href="https://minjunkimsdaads.github.io/3dmodel/)https://minjunkimsdaads.github.io/3dmodel/">Demo</a>
+<a href="https://minjunkimsdaads.github.io/3dmodel/">Demo</a>
 
