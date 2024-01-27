@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
   <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jQuery&logoColor=white"/>
-  <img src="https://img.shields.io/badge/threedotjs-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/threejs-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
 </div>
 
 <h3>개발기간</h3>
@@ -24,5 +24,5 @@
 <p></p>
 <p></p>
 
-<a href="link">Demo</a>
+<a href="https://minjunkimsdaads.github.io/3dmodel/)https://minjunkimsdaads.github.io/3dmodel/">Demo</a>
 
